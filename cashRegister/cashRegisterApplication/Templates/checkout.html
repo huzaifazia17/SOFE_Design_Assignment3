@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block page_content %}
+
+<div class="container col-xs-1 text-center" style="height: 100vh; width: 50vw">
+    <h2 style="padding-top: 20px;">Choose your payment option: </h2>
+    <hr>
+    <div class="">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="table justify-content-around">
+                <tr>
+                    <td class="">
+                        <button class="btn btn-primary btn-rounded" type="submit" value="Debit"
+                            name="Debit">Debit</button>
+                    </td>
+                    <td class="">
+                        <button class="btn btn-primary btn-rounded" type="submit" value="Credit"
+                            name="Credit">Credit</button>
+                    </td>
+                    <td class="">
+                        <button class="btn btn-primary btn-rounded" type="submit" value="Cash" name="Cash">Cash</button>
+                    </td>
+                </tr>
+            </table>
+            <div class="mb-3 d-flex justify-content-center">
+                <p style="padding-right: 10px; font-size: larger; font-weight: bold;">Total: </p>
+                <p style="font-size: larger; font-weight: bold;">{{ TotalPrice }}</p>
+            </div>
+            <button class="btn btn-primary btn-rounded" value="cancel" name="cancel">End Session</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

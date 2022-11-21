@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% block page_content %}
+
+<div class="container col-xs-1 text-center" style="height: 100vh; width: 50vw">
+    <h2 class="text-primary" style="padding-top: 20px;">Thank you for your Purchase! </h2>
+    <p class="text-secondary" style="padding-top: 20px;">The payment method has been authorized! </p>
+    <hr>
+    <h3 class="text-primary" style="padding-top: 20px;">Receipt</h3>
+    <hr>
+
+    <div class="">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table class="table table-hover align-text-center">
+                <tr>
+                    <th>
+                        Product:
+                    </th>
+                    <th>
+                        Price:
+                    </th>
+                </tr>
+                <tr class="table-secondary">
+                    <td>
+                        {% for Product in product_prices %}
+                        {{Product}}
+                        <br>
+                        {% endfor %}
+                    </td>
+
+                    <td>
+                        {% for Product in product_names %}
+                        {{Product}}
+                        <br>
+                        {% endfor %}
+                    </td>
+                <tr class="table-info">
+                    <td>
+                        Total:
+                    </td>
+                    <td>
+                        {{ TotalPrice }}
+                    </td>
+                </tr>
+                </tr>
+            </table>
+
+
+            <button class="btn btn-primary btn-rounded" value="end" name="end">End Session</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

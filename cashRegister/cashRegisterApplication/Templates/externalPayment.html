@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block page_content %}
+
+<div class="container col-xs-1" style="height: 100vh; width: 50vw">
+    <form action="" method="POST" class="text-left">
+        {% csrf_token %}
+        <h2 style="padding-top: 20px;">Payment Information</h2>
+        <hr>
+        <p>
+            Card Type:
+            <select name="card_type" id="cardname">
+                <option value="">--Select a Card Type--</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </p>
+        <p>Card Number: <input type="number" name="cardno" id="cardno" /></p>
+        <p>
+            Expriation Date: <input type="date" name="expdate" id="expdate" />
+        </p>
+        <p>CVV: <input type="password" name="CVV" id="CVV" /></p>
+        <button class="btn btn-primary btn-rounded" value="pay" name="pay">Pay</button>
+    </form>
+</div>
+
+{% endblock %}

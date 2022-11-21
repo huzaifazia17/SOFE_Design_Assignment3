@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% block page_content %}
+
+<div class="container col-xs-1 text-center" style="height: 100vh; width: 50vw">
+    <h2 class="text-primary" style="padding-top: 20px;">Enter Barcode of Item to Scan: </h2>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <input class="form-label" style="height: 50px; width: 30vw" id="scan" type="text" name="scan">
+        </div>
+        <div>
+            <table class="table table-hover align-text-center">
+                <tr>
+                    <th scope="col" class="align-text-center">
+                        Products:
+                    </th>
+                    <th scope="col" class="align-text-center">
+                        Price:
+                    </th>
+                </tr>
+                <tr class="table-secondary">
+                    <td scope="row" class="text-secondary">
+                        {% for Product in product_prices %}
+                        {{Product}}
+                        <br>
+                        {% endfor %}
+                        {{ name }}
+                    </td>
+                    <hr>
+                    <td scope="row" class="text-secondary">
+                        {% for Product in product_names %}
+                        {{Product}}
+                        <br>
+                        {% endfor %}
+                        {{ scannedItem }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="mb-3 d-flex justify-content-around">
+            <button class="btn btn-primary btn-rounded" type="submit">Enter</button>
+            <button class="btn btn-primary btn-rounded" type="submit" value="payment" name="payment">Complete
+                Purchase</button>
+            <button class="btn btn-primary btn-rounded" value="end" name="end">End Session</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}
