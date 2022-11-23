@@ -18,3 +18,9 @@ Figure 4: Payment Option Page
 Figure 5: External Payment Authorization Page
 ![image](https://user-images.githubusercontent.com/57328992/202963193-606ee04e-0b4f-4ab5-a32d-3314ac455e5a.png)
 Figure 6: Receipt and Payment Acknowledgment Page
+![image](https://user-images.githubusercontent.com/57328992/203639482-b3d9450a-c8e2-4b81-a154-c03f6db3d710.png)
+Figure 7: Adding Product to the Database using Django Admin
+![image](https://user-images.githubusercontent.com/57328992/203639531-6b8c12aa-37b2-4046-9aa2-a5a95af55731.png)
+Figure 8: Product added into database
+![image](https://user-images.githubusercontent.com/57328992/203639772-5b8740ba-6f16-4453-939a-d200f7598d29.png)
+Figure 9: All products in the database 
