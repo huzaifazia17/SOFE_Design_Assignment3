@@ -1,10 +1,5 @@
-# SOFE Design Assignment 3
 A cash register application written using Django Rest Framework
 
-## Group
-- Huzaifa Zia (100779087)
-- Daanyaal Tahir (100746644)
-- Lyba Mughees (100750490)
 
 ![image](https://user-images.githubusercontent.com/57328992/202962120-9ae70ad1-50f0-4b55-91d0-76ed4fc0687e.png)
 Figure 1: Start Session Page
